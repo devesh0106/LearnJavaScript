@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> API Call </title>
+    </head>
+    <body style="background-color: grey;">
+
+
+<div id="container"></div>
+  <script>
+ const container = document.querySelector('#container')
+ const request = new XMLHttpRequest();
+ request.open('GET',"https://api.countrylayer.com/rest/v2/name/nepal")
+ request.send();
+
+ //To get the response
+ request.addEventListener('load', function(){
+  const [data] = JSON.parse(this.responseText) //array destructuring
+  const htmlScript = ` HTML Scripts`;
+  container.insertAdjacentElement("afterbegin",htmlScript) //To display in which position of container
+})
+
+        </script>
+    </body>
+</html>
+<!-- XMLHttpRequest objects are used to interact with servers.Can retrieve data from a URL without having to do a full refresh.Used in AJAX(Asynchronous Javascript and XML) -->
+<!-- beforebegin -->
+<p>
+    <!-- afterbegin --> after beginnig of element
+    foooo
+    <!-- beforeend -->
+</p>
+<!-- afterend -->
